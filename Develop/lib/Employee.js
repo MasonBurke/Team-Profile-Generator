@@ -1,11 +1,12 @@
 // TODO: Write code to define and export the Employee class
 
 class Employee {
-    constructor ( name, id, email ) {
+    constructor ( name, id, email, role ) {
     this.id = id;
     this.name = name;
     this.email = email;
-    }
+    this.role = role;
+    };
 
     getName(){
     console.log(`Name: ${this.name}`)
@@ -20,27 +21,17 @@ class Employee {
     }
 
     getRole(){
-
+    console.log(`Role: ${this.role}`)
     }
 
     }
 
-    const newEmployee = new Employee ("mason", 32, "masonburke@rocketmail.com")
+    const newEmployee = new Employee ("mason", 32, "masonburke@rocketmail.com", "employee")
+    console.log("--employee--")
     newEmployee.getName()
     newEmployee.getId()
     newEmployee.getEmail()
-
-
-module.exports = Employee
-
-
-
-
-
-
-
-
-
+    newEmployee.getRole()
 
 
 module.exports = Employee;
