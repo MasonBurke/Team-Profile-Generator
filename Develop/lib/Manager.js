@@ -2,25 +2,21 @@
 const Employee = require("./Employee")
 
 class Manager extends Employee {
-    constructor (name, id, email,role, officeNumber){
-    super(name, id, email,)
-    this.officeNumber = officeNumber
-    this.role = role
+    constructor(name, id, email, officeNumber) {
+        super(name, id, email)
+        this.officeNumber = officeNumber
+
     }
 
-getOffice(){
-    console.log(`Office number: ${this.officeNumber}`)
-}
+    getOfficeNumber() {
+        console.log(`Office number: ${this.officeNumber}`)
+        return this.officeNumber
+    }
 
-getRole(){
-    console.log(`Role: ${this.role}`)
+    getRole() {
+        console.log(`Role: ${this.role}`)
+        return "Manager"
     }
 }
 
-const newManager = new Manager ("Shannon", 45, "shannon@rocketmail.com", "manager", 50)
- console.log("---Manager---")  
-    newManager.getName()
-    newManager.getId()
-    newManager.getEmail()
-    newManager.getRole()
-    newManager.getOffice()
+module.exports = Manager

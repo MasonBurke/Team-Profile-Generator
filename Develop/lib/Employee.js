@@ -5,33 +5,29 @@ class Employee {
     this.id = id;
     this.name = name;
     this.email = email;
-    this.role = role;
+    this.role = "Employee";
     };
 
     getName(){
     console.log(`Name: ${this.name}`)
+    return this.name
     }
 
     getId(){
     console.log(`ID#: ${this.id}`)
+    return this.id
     }
 
     getEmail(){
     console.log(`Email: ${this.email}`)
+    return this.email
     }
 
-    getRole(){
+    getRole() {
     console.log(`Role: ${this.role}`)
+    return this.role
     }
 
     }
-
-    const newEmployee = new Employee ("mason", 32, "masonburke@rocketmail.com", "employee")
-    console.log("--employee--")
-    newEmployee.getName()
-    newEmployee.getId()
-    newEmployee.getEmail()
-    newEmployee.getRole()
-
 
 module.exports = Employee;
